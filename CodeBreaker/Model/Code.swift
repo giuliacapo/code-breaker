@@ -13,7 +13,8 @@ struct Code{
     var pegs: [Peg] = Array(repeating: Code.missing, count: 4)
     
     static let missing: Peg = ""
-    enum Kind: Equatable{ // put a time inside another tipe is beacuse if you refer from it from outside you have to say code.kind
+    // put a time inside another tipe is beacuse if you refer from it from outside you have to say code.kind
+    enum Kind: Equatable{
         case master (isHidden: Bool)
         case guess
         case attempt ([Match])
